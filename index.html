@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <title>Sendi Sosmed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>Sendi Sosmed</h2>
-<p>Kalau teks ini muncul, berarti web sudah jalan 👍</p>
+<div id="auth">
+  <h2>Login / Daftar</h2>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <button onclick="register()">Daftar</button>
+</div>
 
-</body>
-</html>
+<div id="app" style="display:none;">
+  <h3 id="userInfo"></h3>
+
+  <h4>Status</h4>
+  <input id="statusText" placeholder="Tulis status">
+  <button onclick="postStatus()">Kirim</button>
+  <div id="statuses"></div>
+
+  <h4>Chat</h4>
+  <input id="chatText" placeholder="Tulis pesan">
+  <button onclick="sendChat()">Kirim</button>
+  <div id="chats"></div>
+
+  <button onclick="logout()">Logout</button>
+</div>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
