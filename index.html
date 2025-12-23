@@ -19,12 +19,20 @@
 <div id="app" style="display:none;">
   <h3 id="userInfo"></h3>
 
-  <h4>Status</h4>
+  <h4>Buat Username</h4>
+  <input id="usernameInput" placeholder="Username kamu">
+  <button onclick="saveUsername()">Simpan Username</button>
+
+  <hr>
+
+  <h4>Status (Tersimpan)</h4>
   <input id="statusText" placeholder="Tulis status">
-  <button onclick="postStatus()">Kirim</button>
+  <button onclick="postStatus()">Posting</button>
   <div id="statuses"></div>
 
-  <h4>Chat</h4>
+  <hr>
+
+  <h4>Chat Umum</h4>
   <input id="chatText" placeholder="Tulis pesan">
   <button onclick="sendChat()">Kirim</button>
   <div id="chats"></div>
@@ -32,7 +40,12 @@
   <button onclick="logout()">Logout</button>
 </div>
 
-<!-- Firebase -->
+<!-- FIREBASE SDK -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script src="firebase.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
